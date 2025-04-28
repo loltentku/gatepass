@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="gatepassModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="approvals">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="approver_id" Type="nvarchar" MaxLength="50" />
+    <Property Name="approver_name" Type="nvarchar" MaxLength="100" />
+    <Property Name="approver_email" Type="nvarchar" MaxLength="50" />
+    <Property Name="approver_department" Type="nvarchar" MaxLength="50" />
+    <Property Name="approved_at" Type="datetime" />
+    <Property Name="doc_no" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="approveflow">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="status" Type="int" Nullable="false" />
+    <Property Name="type" Type="int" />
+    <Property Name="PC_email" Type="nvarchar" MaxLength="50" />
+    <Property Name="BOI_email" Type="nvarchar" MaxLength="50" />
+    <Property Name="PD_email" Type="nvarchar" MaxLength="50" />
+    <Property Name="SAFETY_email" Type="nvarchar" MaxLength="50" />
+    <Property Name="GAAC_email" Type="nvarchar" MaxLength="50" />
+    <Property Name="DIR_email" Type="nvarchar" MaxLength="50" />
+    <Property Name="GA_email" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="department">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="detail_pass">
+    <Key>
+      <PropertyRef Name="item_no" />
+    </Key>
+    <Property Name="item_no" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="doc_no" Type="nvarchar" MaxLength="50" />
+    <Property Name="description" Type="nvarchar" MaxLength="255" />
+    <Property Name="quantity" Type="int" />
+    <Property Name="purpose" Type="nvarchar" MaxLength="255" />
+    <Property Name="invoice_no" Type="nvarchar" MaxLength="50" />
+    <Property Name="image_url" Type="nvarchar(max)" />
+    <Property Name="image_data" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="heading">
+    <Key>
+      <PropertyRef Name="doc_no" />
+    </Key>
+    <Property Name="doc_no" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" />
+    <Property Name="company" Type="nvarchar" MaxLength="50" />
+    <Property Name="address" Type="nvarchar" MaxLength="150" />
+    <Property Name="tel_no" Type="int" />
+    <Property Name="vec_no" Type="nvarchar" MaxLength="50" />
+    <Property Name="time_out" Type="time" Precision="0" />
+    <Property Name="date" Type="datetime" />
+    <Property Name="requester" Type="nvarchar" MaxLength="50" />
+    <Property Name="department" Type="nvarchar" MaxLength="50" />
+    <Property Name="requester_tel" Type="int" />
+    <Property Name="manager" Type="nvarchar" MaxLength="50" />
+    <Property Name="dgm" Type="nvarchar" MaxLength="50" />
+    <Property Name="security" Type="nvarchar" MaxLength="50" />
+    <Property Name="time" Type="time" Precision="0" />
+    <Property Name="status" Type="int" />
+    <Property Name="formtype" Type="int" Nullable="false" />
+    <Property Name="factory" Type="nvarchar" MaxLength="10" />
+    <Property Name="type" Type="int" />
+    <Property Name="asset_no" Type="nchar" MaxLength="10" />
+    <Property Name="return_date" Type="date" />
+    <Property Name="checked_by" Type="nvarchar" MaxLength="50" />
+    <Property Name="checkin_status" Type="int" />
+    <Property Name="checkout_status" Type="int" />
+    <Property Name="checkin_date" Type="datetime" />
+    <Property Name="checkout_date" Type="datetime" />
+    <Property Name="warehouse_check" Type="int" />
+    <Property Name="warehouse_date" Type="datetime" />
+  </EntityType>
+  <EntityType Name="login">
+    <Key>
+      <PropertyRef Name="username" />
+    </Key>
+    <Property Name="username" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="password" Type="nvarchar" MaxLength="50" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" />
+    <Property Name="role" Type="nvarchar" MaxLength="20" />
+    <Property Name="factory" Type="nvarchar" MaxLength="10" />
+    <Property Name="department" Type="nvarchar" MaxLength="20" />
+    <Property Name="email" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="fk_approvals_heading">
+    <End Role="heading" Type="Self.heading" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="approvals" Type="Self.approvals" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="heading">
+        <PropertyRef Name="doc_no" />
+      </Principal>
+      <Dependent Role="approvals">
+        <PropertyRef Name="doc_no" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DetailPass_Heading">
+    <End Role="heading" Type="Self.heading" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="detail_pass" Type="Self.detail_pass" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="heading">
+        <PropertyRef Name="doc_no" />
+      </Principal>
+      <Dependent Role="detail_pass">
+        <PropertyRef Name="doc_no" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="gatepassModelStoreContainer">
+    <EntitySet Name="approvals" EntityType="Self.approvals" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="approveflow" EntityType="Self.approveflow" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="department" EntityType="Self.department" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="detail_pass" EntityType="Self.detail_pass" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="heading" EntityType="Self.heading" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="login" EntityType="Self.login" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="fk_approvals_heading" Association="Self.fk_approvals_heading">
+      <End Role="heading" EntitySet="heading" />
+      <End Role="approvals" EntitySet="approvals" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DetailPass_Heading" Association="Self.FK_DetailPass_Heading">
+      <End Role="heading" EntitySet="heading" />
+      <End Role="detail_pass" EntitySet="detail_pass" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

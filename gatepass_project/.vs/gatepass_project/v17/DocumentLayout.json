@@ -1,0 +1,307 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\a10m221233\\source\\repos\\gatepass_project\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\a10m221233\\Desktop\\ApproveLogin.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFE22A00-0492-4CB5-8A05-3CBC4086079D}|gatepass_project\\gatepass_project.csproj|c:\\users\\a10m221233\\source\\repos\\gatepass_project\\gatepass_project\\viewdocuments.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{EFE22A00-0492-4CB5-8A05-3CBC4086079D}|gatepass_project\\gatepass_project.csproj|solutionrelative:gatepass_project\\viewdocuments.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFE22A00-0492-4CB5-8A05-3CBC4086079D}|gatepass_project\\gatepass_project.csproj|c:\\users\\a10m221233\\source\\repos\\gatepass_project\\gatepass_project\\viewdocuments.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EFE22A00-0492-4CB5-8A05-3CBC4086079D}|gatepass_project\\gatepass_project.csproj|solutionrelative:gatepass_project\\viewdocuments.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFE22A00-0492-4CB5-8A05-3CBC4086079D}|gatepass_project\\gatepass_project.csproj|c:\\users\\a10m221233\\source\\repos\\gatepass_project\\gatepass_project\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{EFE22A00-0492-4CB5-8A05-3CBC4086079D}|gatepass_project\\gatepass_project.csproj|solutionrelative:gatepass_project\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFE22A00-0492-4CB5-8A05-3CBC4086079D}|gatepass_project\\gatepass_project.csproj|c:\\users\\a10m221233\\source\\repos\\gatepass_project\\gatepass_project\\viewdetails.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{EFE22A00-0492-4CB5-8A05-3CBC4086079D}|gatepass_project\\gatepass_project.csproj|solutionrelative:gatepass_project\\viewdetails.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFE22A00-0492-4CB5-8A05-3CBC4086079D}|gatepass_project\\gatepass_project.csproj|c:\\users\\a10m221233\\source\\repos\\gatepass_project\\gatepass_project\\viewdetails2.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{EFE22A00-0492-4CB5-8A05-3CBC4086079D}|gatepass_project\\gatepass_project.csproj|solutionrelative:gatepass_project\\viewdetails2.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFE22A00-0492-4CB5-8A05-3CBC4086079D}|gatepass_project\\gatepass_project.csproj|c:\\users\\a10m221233\\source\\repos\\gatepass_project\\gatepass_project\\viewdetails2.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EFE22A00-0492-4CB5-8A05-3CBC4086079D}|gatepass_project\\gatepass_project.csproj|solutionrelative:gatepass_project\\viewdetails2.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFE22A00-0492-4CB5-8A05-3CBC4086079D}|gatepass_project\\gatepass_project.csproj|c:\\users\\a10m221233\\source\\repos\\gatepass_project\\gatepass_project\\approve1.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EFE22A00-0492-4CB5-8A05-3CBC4086079D}|gatepass_project\\gatepass_project.csproj|solutionrelative:gatepass_project\\approve1.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFE22A00-0492-4CB5-8A05-3CBC4086079D}|gatepass_project\\gatepass_project.csproj|c:\\users\\a10m221233\\source\\repos\\gatepass_project\\gatepass_project\\createuser.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{EFE22A00-0492-4CB5-8A05-3CBC4086079D}|gatepass_project\\gatepass_project.csproj|solutionrelative:gatepass_project\\createuser.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFE22A00-0492-4CB5-8A05-3CBC4086079D}|gatepass_project\\gatepass_project.csproj|c:\\users\\a10m221233\\source\\repos\\gatepass_project\\gatepass_project\\createuser.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EFE22A00-0492-4CB5-8A05-3CBC4086079D}|gatepass_project\\gatepass_project.csproj|solutionrelative:gatepass_project\\createuser.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFE22A00-0492-4CB5-8A05-3CBC4086079D}|gatepass_project\\gatepass_project.csproj|c:\\users\\a10m221233\\source\\repos\\gatepass_project\\gatepass_project\\default.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EFE22A00-0492-4CB5-8A05-3CBC4086079D}|gatepass_project\\gatepass_project.csproj|solutionrelative:gatepass_project\\default.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFE22A00-0492-4CB5-8A05-3CBC4086079D}|gatepass_project\\gatepass_project.csproj|C:\\Users\\a10m221233\\source\\repos\\gatepass_project\\gatepass_project\\approve1.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{EFE22A00-0492-4CB5-8A05-3CBC4086079D}|gatepass_project\\gatepass_project.csproj|solutionrelative:gatepass_project\\approve1.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFE22A00-0492-4CB5-8A05-3CBC4086079D}|gatepass_project\\gatepass_project.csproj|C:\\Users\\a10m221233\\source\\repos\\gatepass_project\\gatepass_project\\approve2.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EFE22A00-0492-4CB5-8A05-3CBC4086079D}|gatepass_project\\gatepass_project.csproj|solutionrelative:gatepass_project\\approve2.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFE22A00-0492-4CB5-8A05-3CBC4086079D}|gatepass_project\\gatepass_project.csproj|C:\\Users\\a10m221233\\source\\repos\\gatepass_project\\gatepass_project\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{EFE22A00-0492-4CB5-8A05-3CBC4086079D}|gatepass_project\\gatepass_project.csproj|solutionrelative:gatepass_project\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFE22A00-0492-4CB5-8A05-3CBC4086079D}|gatepass_project\\gatepass_project.csproj|C:\\Users\\a10m221233\\source\\repos\\gatepass_project\\gatepass_project\\detail_pass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EFE22A00-0492-4CB5-8A05-3CBC4086079D}|gatepass_project\\gatepass_project.csproj|solutionrelative:gatepass_project\\detail_pass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFE22A00-0492-4CB5-8A05-3CBC4086079D}|gatepass_project\\gatepass_project.csproj|C:\\Users\\a10m221233\\source\\repos\\gatepass_project\\gatepass_project\\approve2.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{EFE22A00-0492-4CB5-8A05-3CBC4086079D}|gatepass_project\\gatepass_project.csproj|solutionrelative:gatepass_project\\approve2.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFE22A00-0492-4CB5-8A05-3CBC4086079D}|gatepass_project\\gatepass_project.csproj|C:\\Users\\a10m221233\\source\\repos\\gatepass_project\\gatepass_project\\model1.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
+      "RelativeMoniker": "D:0:0:{EFE22A00-0492-4CB5-8A05-3CBC4086079D}|gatepass_project\\gatepass_project.csproj|solutionrelative:gatepass_project\\model1.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Approve1.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\a10m221233\\source\\repos\\gatepass_project\\gatepass_project\\Approve1.aspx.cs",
+              "RelativeDocumentMoniker": "gatepass_project\\Approve1.aspx.cs",
+              "ToolTip": "C:\\Users\\a10m221233\\source\\repos\\gatepass_project\\gatepass_project\\Approve1.aspx.cs",
+              "RelativeToolTip": "gatepass_project\\Approve1.aspx.cs",
+              "ViewState": "AgIAAJ0AAAAAAAAAAAAQwFAAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T07:09:54.268Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ApproveLogin.aspx",
+              "DocumentMoniker": "C:\\Users\\a10m221233\\Desktop\\ApproveLogin.aspx",
+              "RelativeDocumentMoniker": "..\\..\\..\\Desktop\\ApproveLogin.aspx",
+              "ToolTip": "C:\\Users\\a10m221233\\Desktop\\ApproveLogin.aspx",
+              "RelativeToolTip": "..\\..\\..\\Desktop\\ApproveLogin.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-04-18T06:16:43.059Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ViewDetails.aspx",
+              "DocumentMoniker": "C:\\Users\\a10m221233\\source\\repos\\gatepass_project\\gatepass_project\\ViewDetails.aspx",
+              "RelativeDocumentMoniker": "gatepass_project\\ViewDetails.aspx",
+              "ToolTip": "C:\\Users\\a10m221233\\source\\repos\\gatepass_project\\gatepass_project\\ViewDetails.aspx",
+              "RelativeToolTip": "gatepass_project\\ViewDetails.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-04-11T01:45:08.729Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Default.aspx",
+              "DocumentMoniker": "C:\\Users\\a10m221233\\source\\repos\\gatepass_project\\gatepass_project\\Default.aspx",
+              "RelativeDocumentMoniker": "gatepass_project\\Default.aspx",
+              "ToolTip": "C:\\Users\\a10m221233\\source\\repos\\gatepass_project\\gatepass_project\\Default.aspx",
+              "RelativeToolTip": "gatepass_project\\Default.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-04-11T01:15:15.688Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ViewDocuments.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\a10m221233\\source\\repos\\gatepass_project\\gatepass_project\\ViewDocuments.aspx.cs",
+              "RelativeDocumentMoniker": "gatepass_project\\ViewDocuments.aspx.cs",
+              "ToolTip": "C:\\Users\\a10m221233\\source\\repos\\gatepass_project\\gatepass_project\\ViewDocuments.aspx.cs",
+              "RelativeToolTip": "gatepass_project\\ViewDocuments.aspx.cs",
+              "ViewState": "AgIAAGABAAAAAAAAAAA5wGoBAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T06:13:41.241Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ViewDocuments.aspx",
+              "DocumentMoniker": "C:\\Users\\a10m221233\\source\\repos\\gatepass_project\\gatepass_project\\ViewDocuments.aspx",
+              "RelativeDocumentMoniker": "gatepass_project\\ViewDocuments.aspx",
+              "ToolTip": "C:\\Users\\a10m221233\\source\\repos\\gatepass_project\\gatepass_project\\ViewDocuments.aspx",
+              "RelativeToolTip": "gatepass_project\\ViewDocuments.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-04-10T06:12:22.824Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ViewDetails2.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\a10m221233\\source\\repos\\gatepass_project\\gatepass_project\\ViewDetails2.aspx.cs",
+              "RelativeDocumentMoniker": "gatepass_project\\ViewDetails2.aspx.cs",
+              "ToolTip": "C:\\Users\\a10m221233\\source\\repos\\gatepass_project\\gatepass_project\\ViewDetails2.aspx.cs",
+              "RelativeToolTip": "gatepass_project\\ViewDetails2.aspx.cs",
+              "ViewState": "AgIAAH4BAAAAAAAAAAAhwGMAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-09T07:54:05.785Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ViewDetails2.aspx",
+              "DocumentMoniker": "C:\\Users\\a10m221233\\source\\repos\\gatepass_project\\gatepass_project\\ViewDetails2.aspx",
+              "RelativeDocumentMoniker": "gatepass_project\\ViewDetails2.aspx",
+              "ToolTip": "C:\\Users\\a10m221233\\source\\repos\\gatepass_project\\gatepass_project\\ViewDetails2.aspx",
+              "RelativeToolTip": "gatepass_project\\ViewDetails2.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-04-09T09:30:21.115Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Default.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\a10m221233\\source\\repos\\gatepass_project\\gatepass_project\\Default.aspx.cs",
+              "RelativeDocumentMoniker": "gatepass_project\\Default.aspx.cs",
+              "ToolTip": "C:\\Users\\a10m221233\\source\\repos\\gatepass_project\\gatepass_project\\Default.aspx.cs",
+              "RelativeToolTip": "gatepass_project\\Default.aspx.cs",
+              "ViewState": "AgIAAJUAAAAAAAAAAAAgwKcAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T06:36:14.812Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CreateUser.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\a10m221233\\source\\repos\\gatepass_project\\gatepass_project\\CreateUser.aspx.cs",
+              "RelativeDocumentMoniker": "gatepass_project\\CreateUser.aspx.cs",
+              "ToolTip": "C:\\Users\\a10m221233\\source\\repos\\gatepass_project\\gatepass_project\\CreateUser.aspx.cs",
+              "RelativeToolTip": "gatepass_project\\CreateUser.aspx.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T06:42:09.238Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Login.aspx",
+              "DocumentMoniker": "C:\\Users\\a10m221233\\source\\repos\\gatepass_project\\gatepass_project\\Login.aspx",
+              "RelativeDocumentMoniker": "gatepass_project\\Login.aspx",
+              "ToolTip": "C:\\Users\\a10m221233\\source\\repos\\gatepass_project\\gatepass_project\\Login.aspx",
+              "RelativeToolTip": "gatepass_project\\Login.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-04-08T06:36:58.189Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CreateUser.aspx",
+              "DocumentMoniker": "C:\\Users\\a10m221233\\source\\repos\\gatepass_project\\gatepass_project\\CreateUser.aspx",
+              "RelativeDocumentMoniker": "gatepass_project\\CreateUser.aspx",
+              "ToolTip": "C:\\Users\\a10m221233\\source\\repos\\gatepass_project\\gatepass_project\\CreateUser.aspx",
+              "RelativeToolTip": "gatepass_project\\CreateUser.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-04-10T06:42:06.66Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Approve1.aspx",
+              "DocumentMoniker": "C:\\Users\\a10m221233\\source\\repos\\gatepass_project\\gatepass_project\\Approve1.aspx",
+              "RelativeDocumentMoniker": "gatepass_project\\Approve1.aspx",
+              "ToolTip": "C:\\Users\\a10m221233\\source\\repos\\gatepass_project\\gatepass_project\\Approve1.aspx",
+              "RelativeToolTip": "gatepass_project\\Approve1.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-04-08T07:09:52.905Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Approve2.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\a10m221233\\source\\repos\\gatepass_project\\gatepass_project\\Approve2.aspx.cs",
+              "RelativeDocumentMoniker": "gatepass_project\\Approve2.aspx.cs",
+              "ToolTip": "C:\\Users\\a10m221233\\source\\repos\\gatepass_project\\gatepass_project\\Approve2.aspx.cs",
+              "RelativeToolTip": "gatepass_project\\Approve2.aspx.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAgwBsAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T07:09:17.985Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Approve2.aspx",
+              "DocumentMoniker": "C:\\Users\\a10m221233\\source\\repos\\gatepass_project\\gatepass_project\\Approve2.aspx",
+              "RelativeDocumentMoniker": "gatepass_project\\Approve2.aspx",
+              "ToolTip": "C:\\Users\\a10m221233\\source\\repos\\gatepass_project\\gatepass_project\\Approve2.aspx",
+              "RelativeToolTip": "gatepass_project\\Approve2.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-04-08T07:09:15.355Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "detail_pass.cs",
+              "DocumentMoniker": "C:\\Users\\a10m221233\\source\\repos\\gatepass_project\\gatepass_project\\detail_pass.cs",
+              "RelativeDocumentMoniker": "gatepass_project\\detail_pass.cs",
+              "ToolTip": "C:\\Users\\a10m221233\\source\\repos\\gatepass_project\\gatepass_project\\detail_pass.cs",
+              "RelativeToolTip": "gatepass_project\\detail_pass.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T06:47:16.836Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Model1.edmx [Diagram1]",
+              "DocumentMoniker": "C:\\Users\\a10m221233\\source\\repos\\gatepass_project\\gatepass_project\\Model1.edmx",
+              "RelativeDocumentMoniker": "gatepass_project\\Model1.edmx",
+              "ToolTip": "C:\\Users\\a10m221233\\source\\repos\\gatepass_project\\gatepass_project\\Model1.edmx [Diagram1]",
+              "RelativeToolTip": "gatepass_project\\Model1.edmx [Diagram1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
+              "WhenOpened": "2025-04-08T06:42:22.932Z",
+              "EditorCaption": " [Diagram1]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

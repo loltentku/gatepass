@@ -1,0 +1,415 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="gatepassModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="approvals">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="approver_id" Type="nvarchar" MaxLength="50" />
+          <Property Name="approver_name" Type="nvarchar" MaxLength="100" />
+          <Property Name="approver_email" Type="nvarchar" MaxLength="50" />
+          <Property Name="approver_department" Type="nvarchar" MaxLength="50" />
+          <Property Name="approved_at" Type="datetime" />
+          <Property Name="doc_no" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="approveflow">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="status" Type="int" Nullable="false" />
+          <Property Name="type" Type="int" />
+          <Property Name="PC_email" Type="nvarchar" MaxLength="50" />
+          <Property Name="BOI_email" Type="nvarchar" MaxLength="50" />
+          <Property Name="PD_email" Type="nvarchar" MaxLength="50" />
+          <Property Name="SAFETY_email" Type="nvarchar" MaxLength="50" />
+          <Property Name="GAAC_email" Type="nvarchar" MaxLength="50" />
+          <Property Name="DIR_email" Type="nvarchar" MaxLength="50" />
+          <Property Name="GA_email" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="department">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="detail_pass">
+          <Key>
+            <PropertyRef Name="item_no" />
+          </Key>
+          <Property Name="item_no" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="doc_no" Type="nvarchar" MaxLength="50" />
+          <Property Name="description" Type="nvarchar" MaxLength="255" />
+          <Property Name="quantity" Type="int" />
+          <Property Name="purpose" Type="nvarchar" MaxLength="255" />
+          <Property Name="invoice_no" Type="nvarchar" MaxLength="50" />
+          <Property Name="image_url" Type="nvarchar(max)" />
+          <Property Name="image_data" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="heading">
+          <Key>
+            <PropertyRef Name="doc_no" />
+          </Key>
+          <Property Name="doc_no" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="50" />
+          <Property Name="company" Type="nvarchar" MaxLength="50" />
+          <Property Name="address" Type="nvarchar" MaxLength="150" />
+          <Property Name="tel_no" Type="int" />
+          <Property Name="vec_no" Type="nvarchar" MaxLength="50" />
+          <Property Name="time_out" Type="time" Precision="0" />
+          <Property Name="date" Type="datetime" />
+          <Property Name="requester" Type="nvarchar" MaxLength="50" />
+          <Property Name="department" Type="nvarchar" MaxLength="50" />
+          <Property Name="requester_tel" Type="int" />
+          <Property Name="manager" Type="nvarchar" MaxLength="50" />
+          <Property Name="dgm" Type="nvarchar" MaxLength="50" />
+          <Property Name="security" Type="nvarchar" MaxLength="50" />
+          <Property Name="time" Type="time" Precision="0" />
+          <Property Name="status" Type="int" />
+          <Property Name="formtype" Type="int" Nullable="false" />
+          <Property Name="factory" Type="nvarchar" MaxLength="10" />
+          <Property Name="type" Type="int" />
+          <Property Name="asset_no" Type="nchar" MaxLength="10" />
+          <Property Name="return_date" Type="date" />
+          <Property Name="checked_by" Type="nvarchar" MaxLength="50" />
+          <Property Name="checkin_status" Type="int" />
+          <Property Name="checkout_status" Type="int" />
+          <Property Name="checkin_date" Type="datetime" />
+          <Property Name="checkout_date" Type="datetime" />
+          <Property Name="warehouse_check" Type="int" />
+          <Property Name="warehouse_date" Type="datetime" />
+        </EntityType>
+        <EntityType Name="login">
+          <Key>
+            <PropertyRef Name="username" />
+          </Key>
+          <Property Name="username" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="password" Type="nvarchar" MaxLength="50" />
+          <Property Name="name" Type="nvarchar" MaxLength="50" />
+          <Property Name="role" Type="nvarchar" MaxLength="20" />
+          <Property Name="factory" Type="nvarchar" MaxLength="10" />
+          <Property Name="department" Type="nvarchar" MaxLength="20" />
+          <Property Name="email" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <Association Name="fk_approvals_heading">
+          <End Role="heading" Type="Self.heading" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="approvals" Type="Self.approvals" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="heading">
+              <PropertyRef Name="doc_no" />
+            </Principal>
+            <Dependent Role="approvals">
+              <PropertyRef Name="doc_no" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DetailPass_Heading">
+          <End Role="heading" Type="Self.heading" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="detail_pass" Type="Self.detail_pass" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="heading">
+              <PropertyRef Name="doc_no" />
+            </Principal>
+            <Dependent Role="detail_pass">
+              <PropertyRef Name="doc_no" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="gatepassModelStoreContainer">
+          <EntitySet Name="approvals" EntityType="Self.approvals" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="approveflow" EntityType="Self.approveflow" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="department" EntityType="Self.department" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="detail_pass" EntityType="Self.detail_pass" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="heading" EntityType="Self.heading" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="login" EntityType="Self.login" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="fk_approvals_heading" Association="Self.fk_approvals_heading">
+            <End Role="heading" EntitySet="heading" />
+            <End Role="approvals" EntitySet="approvals" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DetailPass_Heading" Association="Self.FK_DetailPass_Heading">
+            <End Role="heading" EntitySet="heading" />
+            <End Role="detail_pass" EntitySet="detail_pass" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="gatepassModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="detail_pass">
+          <Key>
+            <PropertyRef Name="item_no" />
+          </Key>
+          <Property Name="item_no" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="doc_no" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="quantity" Type="Int32" />
+          <Property Name="purpose" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="invoice_no" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="image_url" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="heading" Relationship="gatepassModel.FK_DetailPass_Heading" FromRole="detail_pass" ToRole="heading" />
+          <Property Name="image_data" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityContainer Name="gatepassEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="detail_pass" EntityType="Self.detail_pass" />
+          <EntitySet Name="departments" EntityType="gatepassModel.department" />
+          <EntitySet Name="approvals" EntityType="gatepassModel.approval" />
+          <EntitySet Name="logins" EntityType="gatepassModel.login" />
+          <EntitySet Name="headings" EntityType="gatepassModel.heading" />
+          <AssociationSet Name="fk_approvals_heading" Association="gatepassModel.fk_approvals_heading">
+            <End Role="heading" EntitySet="headings" />
+            <End Role="approval" EntitySet="approvals" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DetailPass_Heading" Association="gatepassModel.FK_DetailPass_Heading">
+            <End Role="heading" EntitySet="headings" />
+            <End Role="detail_pass" EntitySet="detail_pass" />
+          </AssociationSet>
+          <EntitySet Name="approveflows" EntityType="gatepassModel.approveflow" />
+        </EntityContainer>
+        <EntityType Name="department">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="id" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="approval">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="approver_id" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="approver_name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="approver_email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="approver_department" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="approved_at" Type="DateTime" Precision="3" />
+          <Property Name="doc_no" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="heading" Relationship="gatepassModel.fk_approvals_heading" FromRole="approval" ToRole="heading" />
+        </EntityType>
+        <EntityType Name="login">
+          <Key>
+            <PropertyRef Name="username" />
+          </Key>
+          <Property Name="username" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="role" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="factory" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="department" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="heading">
+          <Key>
+            <PropertyRef Name="doc_no" />
+          </Key>
+          <Property Name="doc_no" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="company" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="address" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="tel_no" Type="Int32" />
+          <Property Name="vec_no" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="time_out" Type="Time" Precision="0" />
+          <Property Name="date" Type="DateTime" Precision="3" />
+          <Property Name="requester" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="department" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="requester_tel" Type="Int32" />
+          <Property Name="manager" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="dgm" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="security" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="time" Type="Time" Precision="0" />
+          <Property Name="status" Type="Int32" />
+          <Property Name="formtype" Type="Int32" Nullable="false" />
+          <Property Name="factory" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="type" Type="Int32" />
+          <Property Name="asset_no" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="return_date" Type="DateTime" Precision="0" />
+          <Property Name="checked_by" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="checkin_status" Type="Int32" />
+          <Property Name="checkout_status" Type="Int32" />
+          <Property Name="checkin_date" Type="DateTime" Precision="3" />
+          <Property Name="checkout_date" Type="DateTime" Precision="3" />
+          <Property Name="warehouse_check" Type="Int32" />
+          <Property Name="warehouse_date" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="approvals" Relationship="gatepassModel.fk_approvals_heading" FromRole="heading" ToRole="approval" />
+          <NavigationProperty Name="detail_pass" Relationship="gatepassModel.FK_DetailPass_Heading" FromRole="heading" ToRole="detail_pass" />
+        </EntityType>
+        <Association Name="fk_approvals_heading">
+          <End Type="gatepassModel.heading" Role="heading" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="gatepassModel.approval" Role="approval" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="heading">
+              <PropertyRef Name="doc_no" />
+            </Principal>
+            <Dependent Role="approval">
+              <PropertyRef Name="doc_no" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DetailPass_Heading">
+          <End Type="gatepassModel.heading" Role="heading" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="gatepassModel.detail_pass" Role="detail_pass" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="heading">
+              <PropertyRef Name="doc_no" />
+            </Principal>
+            <Dependent Role="detail_pass">
+              <PropertyRef Name="doc_no" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="approveflow">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="status" Type="Int32" Nullable="false" />
+          <Property Name="type" Type="Int32" />
+          <Property Name="PC_email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BOI_email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PD_email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SAFETY_email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="GAAC_email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DIR_email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="GA_email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="gatepassModelStoreContainer" CdmEntityContainer="gatepassEntities">
+          <EntitySetMapping Name="detail_pass">
+            <EntityTypeMapping TypeName="gatepassModel.detail_pass">
+              <MappingFragment StoreEntitySet="detail_pass">
+                <ScalarProperty Name="image_data" ColumnName="image_data" />
+                <ScalarProperty Name="image_url" ColumnName="image_url" />
+                <ScalarProperty Name="invoice_no" ColumnName="invoice_no" />
+                <ScalarProperty Name="item_no" ColumnName="item_no" />
+                <ScalarProperty Name="doc_no" ColumnName="doc_no" />
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="quantity" ColumnName="quantity" />
+                <ScalarProperty Name="purpose" ColumnName="purpose" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="departments">
+            <EntityTypeMapping TypeName="gatepassModel.department">
+              <MappingFragment StoreEntitySet="department">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="approvals">
+            <EntityTypeMapping TypeName="gatepassModel.approval">
+              <MappingFragment StoreEntitySet="approvals">
+                <ScalarProperty Name="doc_no" ColumnName="doc_no" />
+                <ScalarProperty Name="approved_at" ColumnName="approved_at" />
+                <ScalarProperty Name="approver_department" ColumnName="approver_department" />
+                <ScalarProperty Name="approver_email" ColumnName="approver_email" />
+                <ScalarProperty Name="approver_name" ColumnName="approver_name" />
+                <ScalarProperty Name="approver_id" ColumnName="approver_id" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="logins">
+            <EntityTypeMapping TypeName="gatepassModel.login">
+              <MappingFragment StoreEntitySet="login">
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="department" ColumnName="department" />
+                <ScalarProperty Name="factory" ColumnName="factory" />
+                <ScalarProperty Name="role" ColumnName="role" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="username" ColumnName="username" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="headings">
+            <EntityTypeMapping TypeName="gatepassModel.heading">
+              <MappingFragment StoreEntitySet="heading">
+                <ScalarProperty Name="warehouse_date" ColumnName="warehouse_date" />
+                <ScalarProperty Name="warehouse_check" ColumnName="warehouse_check" />
+                <ScalarProperty Name="checkout_date" ColumnName="checkout_date" />
+                <ScalarProperty Name="checkin_date" ColumnName="checkin_date" />
+                <ScalarProperty Name="checkout_status" ColumnName="checkout_status" />
+                <ScalarProperty Name="checkin_status" ColumnName="checkin_status" />
+                <ScalarProperty Name="checked_by" ColumnName="checked_by" />
+                <ScalarProperty Name="return_date" ColumnName="return_date" />
+                <ScalarProperty Name="asset_no" ColumnName="asset_no" />
+                <ScalarProperty Name="type" ColumnName="type" />
+                <ScalarProperty Name="factory" ColumnName="factory" />
+                <ScalarProperty Name="formtype" ColumnName="formtype" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="time" ColumnName="time" />
+                <ScalarProperty Name="security" ColumnName="security" />
+                <ScalarProperty Name="dgm" ColumnName="dgm" />
+                <ScalarProperty Name="manager" ColumnName="manager" />
+                <ScalarProperty Name="requester_tel" ColumnName="requester_tel" />
+                <ScalarProperty Name="department" ColumnName="department" />
+                <ScalarProperty Name="requester" ColumnName="requester" />
+                <ScalarProperty Name="date" ColumnName="date" />
+                <ScalarProperty Name="time_out" ColumnName="time_out" />
+                <ScalarProperty Name="vec_no" ColumnName="vec_no" />
+                <ScalarProperty Name="tel_no" ColumnName="tel_no" />
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="company" ColumnName="company" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="doc_no" ColumnName="doc_no" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="approveflows">
+            <EntityTypeMapping TypeName="gatepassModel.approveflow">
+              <MappingFragment StoreEntitySet="approveflow">
+                <ScalarProperty Name="GA_email" ColumnName="GA_email" />
+                <ScalarProperty Name="DIR_email" ColumnName="DIR_email" />
+                <ScalarProperty Name="GAAC_email" ColumnName="GAAC_email" />
+                <ScalarProperty Name="SAFETY_email" ColumnName="SAFETY_email" />
+                <ScalarProperty Name="PD_email" ColumnName="PD_email" />
+                <ScalarProperty Name="BOI_email" ColumnName="BOI_email" />
+                <ScalarProperty Name="PC_email" ColumnName="PC_email" />
+                <ScalarProperty Name="type" ColumnName="type" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

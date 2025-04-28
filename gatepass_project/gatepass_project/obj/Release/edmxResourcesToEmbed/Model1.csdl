@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="gatepassModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="detail_pass">
+    <Key>
+      <PropertyRef Name="item_no" />
+    </Key>
+    <Property Name="item_no" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="doc_no" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="quantity" Type="Int32" />
+    <Property Name="purpose" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="heading" Relationship="gatepassModel.FK_DetailPass_Heading" FromRole="detail_pass" ToRole="heading" />
+    <Property Name="invoice_no" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="heading">
+    <Key>
+      <PropertyRef Name="doc_no" />
+    </Key>
+    <Property Name="doc_no" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="company" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="address" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="tel_no" Type="Int32" />
+    <Property Name="vec_no" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="time_out" Type="Time" Precision="0" />
+    <Property Name="date" Type="DateTime" Precision="0" />
+    <Property Name="requester" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="department" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="requester_tel" Type="Int32" />
+    <Property Name="manager" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="dgm" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="security" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="time" Type="Time" Precision="0" />
+    <NavigationProperty Name="detail_pass" Relationship="gatepassModel.FK_DetailPass_Heading" FromRole="heading" ToRole="detail_pass" />
+    <Property Name="status" Type="Int32" />
+    <Property Name="formtype" Type="Int32" Nullable="false" />
+    <Property Name="factory" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="type" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="asset_no" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="return_date" Type="DateTime" Precision="0" />
+    <Property Name="checked_by" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="picture">
+    <Key>
+      <PropertyRef Name="doc_no" />
+    </Key>
+    <Property Name="picture1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="doc_no" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="gatepassEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="detail_pass" EntityType="Self.detail_pass" />
+    <EntitySet Name="headings" EntityType="Self.heading" />
+    <EntitySet Name="pictures" EntityType="Self.picture" />
+    <AssociationSet Name="FK_DetailPass_Heading" Association="gatepassModel.FK_DetailPass_Heading">
+      <End Role="heading" EntitySet="headings" />
+      <End Role="detail_pass" EntitySet="detail_pass" />
+    </AssociationSet>
+    <EntitySet Name="logins" EntityType="gatepassModel.login" />
+    <EntitySet Name="approvals" EntityType="gatepassModel.approval" />
+  </EntityContainer>
+  <Association Name="FK_DetailPass_Heading">
+    <End Type="gatepassModel.heading" Role="heading" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="gatepassModel.detail_pass" Role="detail_pass" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="heading">
+        <PropertyRef Name="doc_no" />
+      </Principal>
+      <Dependent Role="detail_pass">
+        <PropertyRef Name="doc_no" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="login">
+    <Key>
+      <PropertyRef Name="username" />
+    </Key>
+    <Property Name="username" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="password" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="role" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="factory" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="approval">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="doc_no" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="username" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="approved_at" Type="DateTime" Precision="3" />
+  </EntityType>
+</Schema>

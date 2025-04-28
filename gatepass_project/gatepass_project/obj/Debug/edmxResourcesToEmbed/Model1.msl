@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="gatepassModelStoreContainer" CdmEntityContainer="gatepassEntities">
+    <EntitySetMapping Name="detail_pass">
+      <EntityTypeMapping TypeName="gatepassModel.detail_pass">
+        <MappingFragment StoreEntitySet="detail_pass">
+          <ScalarProperty Name="image_data" ColumnName="image_data" />
+          <ScalarProperty Name="image_url" ColumnName="image_url" />
+          <ScalarProperty Name="invoice_no" ColumnName="invoice_no" />
+          <ScalarProperty Name="item_no" ColumnName="item_no" />
+          <ScalarProperty Name="doc_no" ColumnName="doc_no" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="quantity" ColumnName="quantity" />
+          <ScalarProperty Name="purpose" ColumnName="purpose" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="departments">
+      <EntityTypeMapping TypeName="gatepassModel.department">
+        <MappingFragment StoreEntitySet="department">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="approvals">
+      <EntityTypeMapping TypeName="gatepassModel.approval">
+        <MappingFragment StoreEntitySet="approvals">
+          <ScalarProperty Name="doc_no" ColumnName="doc_no" />
+          <ScalarProperty Name="approved_at" ColumnName="approved_at" />
+          <ScalarProperty Name="approver_department" ColumnName="approver_department" />
+          <ScalarProperty Name="approver_email" ColumnName="approver_email" />
+          <ScalarProperty Name="approver_name" ColumnName="approver_name" />
+          <ScalarProperty Name="approver_id" ColumnName="approver_id" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="logins">
+      <EntityTypeMapping TypeName="gatepassModel.login">
+        <MappingFragment StoreEntitySet="login">
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="department" ColumnName="department" />
+          <ScalarProperty Name="factory" ColumnName="factory" />
+          <ScalarProperty Name="role" ColumnName="role" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="username" ColumnName="username" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="headings">
+      <EntityTypeMapping TypeName="gatepassModel.heading">
+        <MappingFragment StoreEntitySet="heading">
+          <ScalarProperty Name="warehouse_date" ColumnName="warehouse_date" />
+          <ScalarProperty Name="warehouse_check" ColumnName="warehouse_check" />
+          <ScalarProperty Name="checkout_date" ColumnName="checkout_date" />
+          <ScalarProperty Name="checkin_date" ColumnName="checkin_date" />
+          <ScalarProperty Name="checkout_status" ColumnName="checkout_status" />
+          <ScalarProperty Name="checkin_status" ColumnName="checkin_status" />
+          <ScalarProperty Name="checked_by" ColumnName="checked_by" />
+          <ScalarProperty Name="return_date" ColumnName="return_date" />
+          <ScalarProperty Name="asset_no" ColumnName="asset_no" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="factory" ColumnName="factory" />
+          <ScalarProperty Name="formtype" ColumnName="formtype" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="time" ColumnName="time" />
+          <ScalarProperty Name="security" ColumnName="security" />
+          <ScalarProperty Name="dgm" ColumnName="dgm" />
+          <ScalarProperty Name="manager" ColumnName="manager" />
+          <ScalarProperty Name="requester_tel" ColumnName="requester_tel" />
+          <ScalarProperty Name="department" ColumnName="department" />
+          <ScalarProperty Name="requester" ColumnName="requester" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="time_out" ColumnName="time_out" />
+          <ScalarProperty Name="vec_no" ColumnName="vec_no" />
+          <ScalarProperty Name="tel_no" ColumnName="tel_no" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="company" ColumnName="company" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="doc_no" ColumnName="doc_no" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="approveflows">
+      <EntityTypeMapping TypeName="gatepassModel.approveflow">
+        <MappingFragment StoreEntitySet="approveflow">
+          <ScalarProperty Name="GA_email" ColumnName="GA_email" />
+          <ScalarProperty Name="DIR_email" ColumnName="DIR_email" />
+          <ScalarProperty Name="GAAC_email" ColumnName="GAAC_email" />
+          <ScalarProperty Name="SAFETY_email" ColumnName="SAFETY_email" />
+          <ScalarProperty Name="PD_email" ColumnName="PD_email" />
+          <ScalarProperty Name="BOI_email" ColumnName="BOI_email" />
+          <ScalarProperty Name="PC_email" ColumnName="PC_email" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
